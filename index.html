@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:wght@300;400;500&family=Teko:wght@300..700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <body>
+    <div class="start"><h2>Start Game</h2></div>
+    <div class="score-box">
+      <div class="score score--1"><h1>0</h1></div>
+      <div class="score score--2"><h1>0</h1></div>
+    </div>
+
+    <div class="ball hidden">
+      <img src="images/ball.png" alt="ball" class="ball-img" />
+    </div>
+    <div class="pong--container">
+      <div class="pong pong--1">
+        <img src="images/pong.png" alt="pong" class="pong--img lefts" />
+      </div>
+      <div class="pong pong--2">
+        <img src="images/pong.png" alt="pong" class="pong--img right" />
+      </div>
+    </div>
+
+    <div class="game-over boundaryVertical boundaryVerticalLeft"></div>
+    <div class="game-over boundaryVertical boundaryVerticalRight"></div>
+    <div class="refelct boundaryHorizontal boundaryHorizontalUp"></div>
+    <div class="refelct boundaryHorizontal boundaryHorizontalDown"></div>
+  </body>
+  <script src="script.js"></script>
+</html>
