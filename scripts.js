@@ -116,8 +116,8 @@ var velocityY = 0;
 
 const generateValues = () => {
   theta = (Math.random() * 60 * Math.PI) / 180;
-  velocityX = Math.sqrt(1 + Math.pow(Math.tan(theta), 2)) * Math.cos(theta) * 2;
-  velocityY = Math.sqrt(1 + Math.pow(Math.tan(theta), 2)) * Math.sin(theta) * 2;
+  velocityX = Math.sqrt(1 + Math.pow(Math.tan(theta), 2)) * Math.cos(theta);
+  velocityY = Math.sqrt(1 + Math.pow(Math.tan(theta), 2)) * Math.sin(theta) ;
   ballX = ball.getBoundingClientRect().left;
   ballY = ball.getBoundingClientRect().top;
 };
