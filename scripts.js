@@ -164,7 +164,11 @@ function ballMovement() {
       document.querySelector(".score--1").children[0].textContent = score1;
       document.querySelector(".score--2").children[0].textContent = score2;
       generateValues();
-    } else if (ballX >= window.innerWidth) {
+    } else if (
+      ballX >=
+      document.querySelector(".boundaryVerticalRight").getBoundingClientRect()
+        .right
+    ) {
       ball.style = "top : 50% ; left : 50%;";
       score1++;
       document.querySelector(".score--1").children[0].textContent = score1;

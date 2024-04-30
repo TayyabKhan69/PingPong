@@ -51,11 +51,11 @@ h1 {
   height: 100%;
 }
 .transition {
-  transition: all 1s ease-in;
+  transition: all 0.5s ease-in;
 }
 .pong--img {
   position: relative;
-  height: 10rem;
+  height: 20vh;
   width: 0.7rem;
   left: auto;
   right: auto;
