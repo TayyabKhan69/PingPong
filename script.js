@@ -8,6 +8,38 @@ var score1 = Number(
 var score2 = Number(
   document.querySelector(".score--2").children[0].textContent
 );
+function movePong(num, top) {
+  document.querySelector(
+    `.pong--${num}`
+  ).style = `top : ${top}% ; trasition : all 1s ease-in;`;
+}
+
+var movingUp1 = true;
+var movingUp2 = true;
+document.addEventListener("click", (e) => {
+  if (
+    e.x <=
+    0.5 *
+      document.querySelector(".boundaryVerticalRight").getBoundingClientRect()
+        .right
+  ) {
+    if (movingUp1) {
+      movePong(1, 0);
+      movingUp1 = false;
+    } else {
+      movePong(1, 80);
+      movingUp1 = true;
+    }
+  } else {
+    if (movingUp2) {
+      movePong(2, 0);
+      movingUp2 = false;
+    } else {
+      movePong(2, 80);
+      movingUp2 = true;
+    }
+  }
+});
 
 var pressedKeys = {
   w: false,
@@ -174,6 +206,10 @@ function game() {
 
 document.querySelector(".start").children[0].addEventListener("click", () => {
   document.querySelector(".start").classList.add("hidden");
+  score1 = 0;
+  score2 = 0;
+  document.querySelector(".score--1").children[0].textContent = score1;
+  document.querySelector(".score--2").children[0].textContent = score2;
   ball.style = `top : 0 ; left : 0 ; transition : top ${timeY}s ease-in, left ${timeX}s ease-in;`;
   ball.classList.remove("hidden");
   game();
